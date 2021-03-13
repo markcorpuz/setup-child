@@ -1,6 +1,6 @@
 <?php
 /**
- * SETUP CHILD | 1.0.0 | 210210 | functions.php
+ * SETUP CHILD DATA | 1.0.0 | 210312 | functions.php
  *
  * @package      Setup Child
  * @author       Mark Corpuz
@@ -94,7 +94,7 @@ function ea_child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/inc/author-box.php' );
 	include_once( get_stylesheet_directory() . '/inc/template-tags.php' );
 	include_once( get_stylesheet_directory() . '/inc/items.php' );
-	//include_once( get_stylesheet_directory() . '/inc/site-footer.php' );
+	include_once( get_stylesheet_directory() . '/inc/site-footer-data.php' );
 
 	// Editor
 	include_once( get_stylesheet_directory() . '/inc/disable-editor.php' );
