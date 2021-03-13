@@ -1,0 +1,144 @@
+/* SETUP CHILD DATA | 1.0.0 | 210312 | assets/scss/partials/site-header-data.scss
+---------------------------------------------------------------------------------------------------- */
+
+	// 360px & ABOVE
+	@include media(">=tiny") {}
+	// 425px & ABOVE
+	@include media(">=smaller") {}
+	// 512px & ABOVE
+	@include media(">=small") {}
+	// 768px & ABOVE
+	@include media(">=tablet") {}
+	// 992px & ABOVE
+	@include media(">=medium") {}
+	// 1200px & ABOVE
+	@include media(">=large") {}
+
+/* Site Header
+---------------------------------------------------------------------------------------------------- */
+
+.site-header {
+	padding: 1rem 1.5rem;
+	background: #f0f0f0;
+	position: relative;
+
+	.wrap {
+		display: flex;
+		flex-direction: row;
+	}
+
+}
+
+.item.source {
+	margin-left: 1rem;
+	font-size: 0.875rem;
+	line-height: 1.25rem;		
+}
+
+.title-area {
+
+	h1.site-title,
+	p.site-title {
+		margin: 0;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+		font-weight: 700;
+
+		a {
+			color: $base-color;
+			text-decoration: none;
+		}
+	}
+
+	// LOGO BACKGROUND
+	.site-title a {}
+
+	.site-description {
+		margin-bottom: 0;
+	}
+
+}
+
+
+/* Admin Bar
+--------------------------------------------- */
+
+@include media(">782px" ) {
+	.admin-bar .site-container {
+		padding-top: 32px;
+	}
+}
+
+@include media("<=782px") {
+	#wpadminbar {
+		display: none !important;
+	}
+}
+
+/* Persistent Header
+--------------------------------------------- */
+
+@if( $persistent_desktop ) {
+	@include media(">mobile_menu") {
+
+		.site-container {
+			padding-top: $persistent_desktop;
+		}
+
+		.site-header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 999;
+			height: $persistent_desktop;
+		}
+
+		@include media(">782px") {
+			.admin-bar {
+
+				.site-container {
+					padding-top: 32px + $persistent_desktop;
+				}
+
+				.site-header {
+					top: 32px;
+				}
+			}
+		}
+	}
+}
+
+@if( $persistant_mobile ) {
+	@include media("<=mobile_menu") {
+
+		.site-container {
+			padding-top: $persistant_mobile;
+		}
+
+		.site-header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 999;
+
+			overflow: scroll;
+			max-height: 100vh;
+		}
+
+		@include media(">782px") {
+			.admin-bar {
+
+				.site-container {
+					padding-top: 32px + $persistant_mobile;
+				}
+
+				.site-header {
+					top: 32px;
+				}
+			}
+		}
+
+	}
+}
