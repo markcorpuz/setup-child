@@ -1,4 +1,4 @@
-/* SETUP CHILD-DATA | 1.0.0 | 210615 | assets/scss/main.scss
+/* SETUP CHILD-DATA | 1.0.0 | 210605 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 /*  SETUP-CHILD | 1.0.0 | 210615 | setup-child/fonts/setup-child-100/fontface.scss
 ---------------------------------------------------------------------------------------------------- */
@@ -2675,6 +2675,27 @@ div.wpforms-container.one-line:after {
   }
 }
 
+/* SETUP CHILD | 1.0.0 | 210210 | assets/scss/partials/entry-content.scss
+---------------------------------------------------------------------------------------------------- */
+ul, ol {
+  padding-left: 1.5rem;
+}
+ul li, ol li {
+  padding-bottom: 0.5rem;
+}
+ul li:last-child, ol li:last-child {
+  padding-bottom: 0;
+}
+ul li ul, ul li ol, ol li ul, ol li ol {
+  padding-top: 0.5rem;
+}
+ul.wp-block-gallery, ol.wp-block-gallery {
+  padding-left: 0;
+}
+ul.wp-block-gallery li, ol.wp-block-gallery li {
+  padding-bottom: 0;
+}
+
 /* SETUP CHILD | 1.0.0 | 210429 | assets/scss/partials/author.scss
 ---------------------------------------------------------------------------------------------------- */
 .entry-author {
@@ -3049,6 +3070,25 @@ div.wpforms-container.one-line:after {
   margin-inline-start: 0;
   margin-inline-end: 0;
 }
+/* SETUP-CHILD | 1.0.0 | 210618 | setup-child/block/setup-child-100/column.scss
+---------------------------------------------------------------------------------------------------- */
+.wp-block-columns.has-background {
+  padding: 2em;
+}
+@media (max-width: 1071px) {
+  .wp-block-columns.has-background {
+    padding: 1.5rem;
+  }
+}
+.wp-block-columns.has-background.padding-zero {
+  padding: 0;
+}
+@media (max-width: 1071px) {
+  .wp-block-columns .wp-block-column:not(:first-child) {
+    margin-left: 1.5rem;
+  }
+}
+
 /* SETUP-BE | 1.0.0 | 200531 | setup-be/block/setup-be-100/gallery.scss
 ---------------------------------------------------------------------------------------------------- */
 .entry-content ul.blocks-gallery-grid,
@@ -3073,7 +3113,7 @@ h6.has-background {
   padding: 1em;
 }
 
-/* SETUP-BE | 1.0.0 | 210317 | setup-child/block/setup-child-100/list.scss
+/* SETUP-CHILD | 1.0.0 | 210605 | setup-child/block/setup-child-100/list.scss
 ---------------------------------------------------------------------------------------------------- */
 .entry-content ul, .entry-content ol {
   padding-left: 1.5rem;
@@ -3092,6 +3132,13 @@ h6.has-background {
 }
 .entry-content ul.wp-block-gallery li, .entry-content ol.wp-block-gallery li {
   padding-bottom: 0;
+}
+
+.editor-styles-wrapper ul ul,
+.editor-styles-wrapper ul ol,
+.editor-styles-wrapper ol ul,
+.editor-styles-wrapper ol ol {
+  margin-left: 1rem;
 }
 
 /*  SETUP-CHILD | 1.0.0 | 210224 | setup-child/selector/setup-child-100/textsize.scss
